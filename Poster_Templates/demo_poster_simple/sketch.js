@@ -20,6 +20,10 @@ let zero;
 let numbers = [];
 let mousePos
 let tileSize = 0
+let switchCount = 0;
+let currentGridNumber = 0;
+let oldGridNumber = 0;
+
 
 function preload() {
   font = loadFont('Montserrat-Black.otf');
@@ -34,7 +38,7 @@ function setup() {
   textFont(font);
   rectMode(CORNER)
 
-  tileSize = poster.vw *100/9
+  updateTiles();
 
   // Spikeys
   spikey1 = new Spikey(width / 2, height / 2, 300 * poster.vw);
@@ -45,14 +49,7 @@ function setup() {
   spikey6 = new Spikey(width / 2, height / 2, 300 * poster.vw);
 
   // create grid
-  for (let row = 0; row < rows; row++) {
-    for (let col = 0; col < cols; col++) {
-      let showTile = true;
 
-      let tile = new Tile(col * tileSize, row * tileSize, tileSize, showTile, row * cols + col);
-      tileArray.push(tile);
-    }
-  }
   // converted numbers to 0 and 1
   zero = [
     0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -257,20 +254,33 @@ function setup() {
 }
 
 
-let switchCount = 0;
-let currentGridNumber = 0;
-let oldGridNumber = 0;
+
+function updateTiles() {
+  tileArray = [];
+  tileSize = poster.vw *100/9
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      let showTile = true;
+
+      let tile = new Tile(col * tileSize, row * tileSize, tileSize, showTile, row * cols + col);
+      tileArray.push(tile);
+    }
+  }
+}
+
+
 
 
 function draw() {
 
-  if (mouseX > width / 2) {
+  if (poster.position.x > width / 2) {
     background(0);
 
 } else {
     background(255);
 }
 
+/*
   switchCount++
   if (switchCount > 300) {
     currentGridNumber++;
@@ -279,12 +289,12 @@ function draw() {
       currentGridNumber = 0
     }
   }
-
+*/
 
   // choose number grid to display
-  if (currentGridNumber != oldGridNumber) {
-    showTemplate(numbers[currentGridNumber])
-    oldGridNumber = currentGridNumber;
+  if (poster.getCounter() != oldGridNumber) {
+    showTemplate(numbers[poster.getCounter()])
+    oldGridNumber = poster.getCounter();
   }
 
 
@@ -304,7 +314,7 @@ function draw() {
       tileArray[index].display();
     }
   }
-
+/*important!*/ poster.posterTasks(); // do not remove this last line!  
 }
 
 function showTemplate(template) {
@@ -599,8 +609,6 @@ function showTemplate(template) {
     //  spikey1.y = height / 2
 
   }
-/*important!*/ poster.posterTasks(); // do not remove this last line!  
-
 
 }
 
@@ -620,7 +628,7 @@ class Tile {
 
     } else {
       // Debug aid
-      if (mouseX > width / 2) {
+      if (poster.position.x > width / 2) {
         fill(0)
       } else {
         fill(255)
@@ -628,7 +636,7 @@ class Tile {
       //fill(200, 20, 20);
       //stroke(0); 
     }
-    rect(this.x, this.y, this.size, this.size);
+    rect(this.x, this.y, this.size*1.02, this.size*1.02);
     fill(0)
     textAlign(CENTER)
     // text(this.id, this.x + 50, this.y + 50)
@@ -674,7 +682,7 @@ class Spikey {
     }
 
     //  this.oldX = this.x;
-    //   this.oldY = this.y;
+    //  this.oldY = this.y;
   }
 
   display() {
@@ -682,7 +690,7 @@ class Spikey {
     if (this.show) {
       noStroke()
       // mousePos = map(mouseX, 0, width, 0.005, 0.06)
-      if (mouseX > width / 2) {
+      if (poster.position.x > width / 2) {
           fill(255);
           stroke(255);
       } else {
@@ -693,7 +701,7 @@ class Spikey {
 
       // apply lines to Spikey
       for (let l of this.lines) {
-        let oscillatingStroke = this.sinMovement(l.angle, frameCount * -0.02, 0.01 * poster.vw, 0.1 * poster.vw);
+        let oscillatingStroke = this.sinMovement(l.angle, frameCount * -0.02, 0.05 * poster.vw, 0.2 * poster.vw);
         strokeWeight(oscillatingStroke);
         push();
         translate(this.oldX, this.oldY);
@@ -701,9 +709,9 @@ class Spikey {
         let oscillatingLength = 0
 
         if (l.length > this.size * 0.7) {
-          oscillatingLength = this.sinMovement(l.angle, frameCount * 0.01, 0, this.size/4 + (mouseX*poster.vw/10));
+          oscillatingLength = this.sinMovement(l.angle, frameCount * 0.01, 0, this.size/8 + (poster.position.x*poster.vw/10));
         } else {
-          oscillatingLength = this.sinMovement(l.angle, frameCount * 0.01, 0, this.size/6 + (mouseX*poster.vw/10));
+          oscillatingLength = this.sinMovement(l.angle, frameCount * 0.01, 0, this.size/10 + (poster.position.x*poster.vw/10));
         }
 
         line(0, 0, oscillatingLength, 0);
@@ -724,28 +732,10 @@ class Spikey {
 
 function windowScaled() { // this is a custom event called whenever the poster is scaled
   // textSize(10 * poster.vw);
+  updateTiles();
+  showTemplate(numbers[poster.getCounter()])
 }
 
-/* function wordEffect(number, x, y) {
-  push()
-    textSize(120 * poster.vw);
-    translate(x, y)
-    let rotation = (-PI * 0.25) + (poster.posNormal.x * 0.5 * PI)
-    rotate(rotation);
-    // The textBounds function returns the bounding box of the text.
-    // This can be very useful when you need to precisely position text.
-    let bbox = font.textBounds(""+number, 0, 0,);
-    translate((-(bbox.x)/2)-(bbox.w/2), +(bbox.h/2));
-    // uncommment the following line to see the bounding box
-    
-   
-    text(""+number, 0, 0)
-    noFill();
-    stroke(255,0,0)
-    rect(bbox.x, bbox.y, bbox.w, bbox.h);
-  pop();
-}
- */
 
 
 
