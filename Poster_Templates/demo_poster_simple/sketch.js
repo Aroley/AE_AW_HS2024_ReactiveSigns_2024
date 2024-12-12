@@ -52,203 +52,203 @@ function setup() {
 
   // converted numbers to 0 and 1
   zero = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 0, 
+    1, 0, 1, 1, 1, 1, 1, 0, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 1, 0, 0, 0, 0, 0, 1, 1, 
+    1, 0, 1, 1, 1, 1, 1, 0, 1, 
+    0, 1, 1, 1, 1, 1, 1, 1, 0 
+    ]
+numbers.push(zero)
+one = [
+    0, 0, 0, 0, 0, 1, 1, 1, 0, 
+    0, 0, 0, 0, 0, 1, 1, 0, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 
     0, 0, 0, 0, 0, 0, 0, 0, 0
   ]
-  numbers.push(zero)
-  one = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(one)
+numbers.push(one)
 
-  two = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(two)
+two = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(two)
 
-  three = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(three)
+three = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(three)
 
-  four = [
+four = [
     0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
     0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(four)
+]
+numbers.push(four)
 
-  five = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(five)
+five = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(five)
 
-  six = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(six)
+six = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(six)
 
-  seven = [
+seven = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
     0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0, 1,
     0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(seven)
+]
+numbers.push(seven)
 
-  eight = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(eight)
+eight = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(eight)
 
-  nine = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 1, 1, 1, 1, 1, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0
-  ]
-  numbers.push(nine)
+nine = [
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 0, 1, 1, 1, 1, 1, 0, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 1, 0, 0, 0, 0, 0, 1, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 1,
+    0, 0, 1, 1, 1, 1, 1, 0, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 0
+]
+numbers.push(nine)
 
   showTemplate(numbers[0]);
 }
@@ -328,281 +328,284 @@ function showTemplate(template) {
   switch (template) {
     case zero:
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = false;
-      spikey4.show = false;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = false;
+    spikey4.show = false;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey3.x = -width
-      spikey3.y = tileArray[56].y + tileSize
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey4.x = +width * 2
-      spikey4.y = tileArray[56].y + tileSize
+    spikey4.x = tileArray[70].x + tileSize/2
+    spikey4.y = tileArray[70].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-    case one:
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = false;
-      spikey4.show = false;
-      spikey5.show = false;
-      spikey6.show = true;
+case one:
 
-      spikey1.x = tileArray[12].x
-      spikey1.y = tileArray[12].y + tileSize
+    spikey1.show = false;
+    spikey2.show = true;
+    spikey3.show = false;
+    spikey4.show = false;
+    spikey5.show = false;
+    spikey6.show = true;
 
-      spikey2.x = tileArray[15].x + tileSize
-      spikey2.y = tileArray[15].y + tileSize
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey3.x = tileArray[63].x - width
-      spikey3.y = tileArray[63].y
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey4.x = tileArray[71].x + width
-      spikey4.y = tileArray[71].y
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey5.x = tileArray[118].x - width
-      spikey5.y = tileArray[118].y
+    spikey4.x = tileArray[70].x + tileSize/2
+    spikey4.y = tileArray[70].y + tileSize/2
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-    case two:
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = true;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+case two:
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey3.x = tileArray[65].x
-      spikey3.y = tileArray[65].y
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey4.x = tileArray[78].x + tileSize
-      spikey4.y = tileArray[78].y + tileSize
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-    case three:
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = false;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+case three:
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey3.x = tileArray[74].x
-      spikey3.y = tileArray[74].y
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey4.x = width * 2
-      spikey4.y = tileArray[74].y + tileSize
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
+
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
+
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-    case four:
+case four:
+   
+spikey1.show = true;
+spikey2.show = true;
+spikey3.show = true;
+spikey4.show = true;
+spikey5.show = false;
+spikey6.show = true;
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = false;
-      spikey5.show = false;
-      spikey6.show = true;
+spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey3.x = tileArray[74].x
-      spikey3.y = tileArray[74].y + tileSize
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey4.x = width * 2
-      spikey4.y = tileArray[74].y + tileSize
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+break;
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+case five:
 
-    case five:
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = true;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey3.x = tileArray[74].x
-      spikey3.y = tileArray[74].y + tileSize
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey4.x = tileArray[69].x + tileSize
-      spikey4.y = tileArray[69].y
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+case six:
+    
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-    case six:
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = false;
-      spikey4.show = true;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey3.x = -width * 2
-      spikey3.y = tileArray[74].y + tileSize
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey4.x = tileArray[69].x + tileSize
-      spikey4.y = tileArray[69].y
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+case seven:
+    
+spikey1.show = true;
+spikey2.show = true;
+spikey3.show = true;
+spikey4.show = true;
+spikey5.show = false;
+spikey6.show = true;
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+spikey1.x = tileArray[10].x + tileSize/2
+spikey1.y = tileArray[10].y + tileSize/2
 
-    case seven:
+spikey2.x = tileArray[16].x + tileSize/2
+spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = true;
-      spikey5.show = false;
-      spikey6.show = true;
+spikey3.x = tileArray[63].x + tileSize/2
+spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+spikey4.x = tileArray[71].x + tileSize/2
+spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey2.x = tileArray[23].x + tileSize
-      spikey2.y = tileArray[23].y
+spikey5.x = tileArray[127].x + tileSize/2
+spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey3.x = tileArray[66].x
-      spikey3.y = tileArray[66].y + tileSize
+spikey6.x = tileArray[133].x + tileSize/2
+spikey6.y = tileArray[133].y + tileSize/2
+break;
 
-      spikey4.x = tileArray[69].x + tileSize
-      spikey4.y = tileArray[69].y + tileSize
+case eight:
 
-      spikey5.x = -width * 2
-      spikey5.y = tileArray[121].y + tileSize
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey6.x = tileArray[122].x + tileSize
-      spikey6.y = tileArray[122].y + tileSize
-      break;
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-    case eight:
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = true;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey3.x = tileArray[74].x
-      spikey3.y = tileArray[74].y
-
-      spikey4.x = tileArray[70].y
-      spikey4.y = tileArray[70].y + tileSize
-
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
-
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
 
     case nine:
 
-      spikey1.show = true;
-      spikey2.show = true;
-      spikey3.show = true;
-      spikey4.show = false;
-      spikey5.show = true;
-      spikey6.show = true;
+    spikey1.show = true;
+    spikey2.show = true;
+    spikey3.show = true;
+    spikey4.show = true;
+    spikey5.show = true;
+    spikey6.show = true;
 
-      spikey1.x = tileArray[20].x
-      spikey1.y = tileArray[20].y
+    spikey1.x = tileArray[10].x + tileSize/2
+    spikey1.y = tileArray[10].y + tileSize/2
 
-      spikey2.x = tileArray[24].x + tileSize
-      spikey2.y = tileArray[24].y
+    spikey2.x = tileArray[16].x + tileSize/2
+    spikey2.y = tileArray[16].y + tileSize/2
 
-      spikey3.x = tileArray[74].x
-      spikey3.y = tileArray[74].y + tileSize
+    spikey3.x = tileArray[63].x + tileSize/2
+    spikey3.y = tileArray[63].y + tileSize/2
 
-      spikey4.x = width * 2
-      spikey4.y = tileArray[74].y + tileSize
+    spikey4.x = tileArray[71].x + tileSize/2
+    spikey4.y = tileArray[71].y + tileSize/2
 
-      spikey5.x = tileArray[119].x
-      spikey5.y = tileArray[119].y + tileSize
+    spikey5.x = tileArray[127].x + tileSize/2
+    spikey5.y = tileArray[127].y + tileSize/2
 
-      spikey6.x = tileArray[123].x + tileSize
-      spikey6.y = tileArray[123].y + tileSize
-      break;
+    spikey6.x = tileArray[133].x + tileSize/2
+    spikey6.y = tileArray[133].y + tileSize/2
+    break;
+
 
     default:
     //  spikey1.x = width / 2
@@ -735,7 +738,6 @@ function windowScaled() { // this is a custom event called whenever the poster i
   updateTiles();
   showTemplate(numbers[poster.getCounter()])
 }
-
 
 
 
